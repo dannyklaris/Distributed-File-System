@@ -55,4 +55,22 @@ NB: this script does not verify that the java version installed on your computer
     ```
     java -cp client.jar;. ClientMain 12345 1000
     ```
-    
+
+## How to run the all the code
+- First, you need to compile the java code.
+    - `javac Controller.java`
+    - `javac Dstore.java`
+- Then, you start the Controller by giving parameters to it.
+    - `java Controller (cport) (replication_factor) (timeout) (rebalance_period)`
+        - cport means the central port for Dstore and Client to connect to Controller.
+        - replication_factor means how many Dstore servers do you need. So if you put 1, you must connect at least 1, if you put 2, you must connect at least 2.
+        - rebalance_period i dont remember.
+    - `java Controller 1234 1 1000 1`
+- Connect Dstore to the Controller.
+    - `java Dstore (dstore port) (cport) (timeout) (file_folder)`
+    - `java Dstore 123 1234 1000 to_store`
+- Then, you compile the client.jar with the ClientMain.java.
+    - `javac -cp client.jar ClientMain.java`
+- Then, start the client.
+    - `java -cp client.jar;. ClientMain (cport) (timeout)`
+    - `java -cp client.jar;. ClientMain 1234 1000`
