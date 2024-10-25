@@ -1,6 +1,6 @@
 # Distributed File System
 ## Description
-This is a repo to store all the files that is related to this coursework.
+This is a repo to store all the files that is related to this project.
 ## Table of Contents
 - [Local Validation](#local-validation)
 - [How to use the provided Client](#how-to-use-the-provided-client)
